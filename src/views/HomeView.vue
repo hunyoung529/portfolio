@@ -3,6 +3,8 @@
     <HeaderView />
     <AboutView />
     <SkillView />
+    <ProjectView />
+    <ContactView />
   </div>
 </template>
 
@@ -11,12 +13,23 @@
 import HeaderView from "@/components/HeaderView.vue";
 import AboutView from "@/components/AboutView.vue";
 import SkillView from "@/components/SkillView.vue";
+import ProjectView from "@/components/ProjectView.vue";
+import ContactView from "@/components/ContactView.vue";
+import { onMounted } from "@vue/runtime-core";
+import AOS from "aos";
 export default {
   name: "HomeView",
   components: {
     HeaderView,
     AboutView,
     SkillView,
+    ProjectView,
+    ContactView,
+  },
+  setup() {
+    onMounted(() => {
+      AOS.init();
+    });
   },
 };
 </script>
@@ -24,12 +37,14 @@ export default {
 .home {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   section {
-    width: 60%;
+    position: relative;
+    width: 100%;
     margin-left: auto;
-    border: 1px solid red;
     height: 100vh;
+    margin-bottom: 300px;
   }
 }
 </style>

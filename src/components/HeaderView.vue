@@ -23,13 +23,11 @@ export default {};
 <style lang="scss" scoped>
 .header {
   position: fixed;
-  border: 1px dashed wheat;
   width: 40%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid white;
   text-align: left;
   .header_wrap {
     height: 100%;
@@ -41,7 +39,6 @@ export default {};
         font-size: 5.625rem;
         font-weight: 100;
         border-bottom: 1px solid white;
-        border-top: 1px solid white;
         margin-bottom: 20px;
       }
       p {

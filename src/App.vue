@@ -3,17 +3,31 @@
 </template>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap");
+@font-face {
+  font-family: "intelone-mono-font-family-regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2")
+    format("woff2");
+
+  font-style: normal;
+  unicode-range: U+0020-007F;
+}
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+    format("woff2");
+
+  font-style: normal;
+  unicode-range: U+AC00-D7A3;
+}
 #app {
-  font-family: "Open Sans", sans-serif;
+  font-family: "intelone-mono-font-family-regular", "TheJamsil5Bold", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
   width: 100%;
   height: 100vh;
-
-  padding: 50px;
+  box-sizing: border-box;
 }
 body {
   background-color: #0f172a;

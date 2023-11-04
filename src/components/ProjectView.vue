@@ -11,12 +11,15 @@
       >
         <swiper-slide>
           <div class="imgBox">
-            <figure><img src="../assets/Rectangle.png" alt="" /></figure>
+            <figure><img :src="currentImage" alt="" /></figure>
             <div class="smallImg">
-              <figure><img src="../assets/React.png" alt="" /></figure>
-              <figure><img src="../assets/html.png" alt="" /></figure>
-              <figure><img src="../assets/Rectangle.png" alt="" /></figure>
-              <figure><img src="../assets/Rectangle.png" alt="" /></figure>
+              <img
+                v-for="(smallImage, index) in smallImages"
+                :key="index"
+                :src="smallImage"
+                alt="Small Image"
+                @click="changeLargeImage(smallImage)"
+              />
             </div>
           </div>
           <div class="textBox">
@@ -29,7 +32,7 @@
           </div>
         </swiper-slide>
         <swiper-slide>
-          <figure><img src="../assets/Rectangle.png" alt="" /></figure>
+          <figure><img src="../../public/Rectangle.png" alt="" /></figure>
           <div class="textBox">
             <h2>프로젝트2</h2>
             <p class="skills">프로젝트 기술</p>
@@ -62,6 +65,23 @@ import { Navigation } from "swiper/modules";
 
 export default {
   name: "ProjectView",
+  data() {
+    return {
+      smallImages: [
+        require("../assets/Rectangle3.png"),
+        require("../assets/Rectangle1.png"),
+        require("../assets/Rectangle2.png"),
+        require("../assets/Rectangle3.png"),
+        require("../assets/Rectangle4.png"),
+      ],
+      currentImage: require("../assets/Rectangle.png"),
+    };
+  },
+  methods: {
+    changeLargeImage(newImage) {
+      this.currentImage = newImage;
+    },
+  },
   components: {
     Swiper,
     SwiperSlide,

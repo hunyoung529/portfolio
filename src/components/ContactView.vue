@@ -1,19 +1,58 @@
 <template lang="">
   <section class="contact">
-    <form class="contactWrap">
+    <form class="contactWrap" ref="form" @submit.prevent="sendEmail">
       <p>
         CSR 기반의 UIUX화면 구현 가능 EXPRESS 서버 연결 가능CSR 기반의 UIUX화면
         구현 가능 EXPRESS 서버 연결 가능CSR 기반의 UIUX화면 구현 가능
       </p>
-      <input type="text" placeholder="제목" class="title" />
-      <input type="email" placeholder="email" class="email" />
-      <input type="text" placeholder="내용" class="content" />
-      <input type="submit" />
+      <input type="text" placeholder="제목" class="title" name="subject" />
+      <input type="email" placeholder="email" class="email" name="user_email" />
+      <input type="text" placeholder="내용" class="content" name="message" />
+      <input type="submit" value="Send" />
     </form>
   </section>
 </template>
 <script>
-export default {};
+import emailjs from "@emailjs/browser";
+
+export default {
+  name: "ContactView",
+  data() {
+    return {};
+  },
+  methods: {
+    sendEmail() {
+      const subject = this.$refs.form.subject.value.trim();
+      const email = this.$refs.form.user_email.value.trim();
+      const message = this.$refs.form.message.value.trim();
+
+      if (!email || !subject || !message) {
+        alert("빈칸을 모두 채워주세요");
+      } else {
+        emailjs
+          .sendForm(
+            "service_ufitsw5",
+            "template_njsde7i",
+            this.$refs.form,
+            "0Uhtx6rq2WLW4VOWr"
+          )
+          .then(
+            (result) => {
+              console.log("SUCCESS!", result.text);
+              this.resetForm();
+            },
+            (error) => {
+              console.log("FAILED...", error.text);
+            }
+          );
+      }
+    },
+    resetForm() {
+      const form = this.$refs.form;
+      form.reset();
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .contact {

@@ -9,19 +9,27 @@
         <p>FRONT-END DEVELOPER</p>
       </div>
       <nav class="menu">
-        <p class="About active">ABOUT</p>
-        <p class="Skill">SKILL</p>
-        <p class="Project">PROJECT</p>
-        <p class="Contact">CONTACT</p>
+        <p class="About active" @click="handleScroll('AboutWrap')">ABOUT</p>
+        <p class="Skill" @click="handleScroll('skillWrap')">SKILL</p>
+        <p class="Project" @click="handleScroll('projectWrap')">PROJECT</p>
+        <p class="Contact" @click="handleScroll('contactWrap')">CONTACT</p>
       </nav>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "HeaderView",
+  methods: {
+    handleScroll(className) {
+      this.$emit("scrollToClass", className);
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .header {
+  z-index: 5;
   position: fixed;
   width: 40%;
   height: 100vh;
@@ -57,6 +65,9 @@ export default {};
       p.active {
         font-weight: 600;
         opacity: 1;
+      }
+      p:hover {
+        cursor: pointer;
       }
       p {
         font-weight: 100;

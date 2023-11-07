@@ -19,6 +19,13 @@
   font-style: normal;
   unicode-range: U+AC00-D7A3;
 }
+::-webkit-scrollbar {
+  background-color: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
 #app {
   font-family: "intelone-mono-font-family-regular", "S-CoreDream-3Light",
     sans-serif;

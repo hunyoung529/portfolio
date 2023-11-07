@@ -7,7 +7,7 @@
         :navigation="true"
         :modules="modules"
         class="mySwiper"
-        data-aos="fade-down"
+        data-aos="zoom-in"
       >
         <swiper-slide v-for="(slide, index) in slides" :key="slide.id">
           <div class="imgBox">
@@ -69,12 +69,12 @@ export default {
           title: "프로젝트2",
           description: "프로젝트1에 대한 설명입니다.",
           link: "#",
-          mainImage: require("../assets/Rectangle3.png"),
+          mainImage: require("../assets/project1_1.png"),
           smallImages: [
-            require("../assets/Rectangle1.png"),
-            require("../assets/Rectangle2.png"),
-            require("../assets/Rectangle3.png"),
-            require("../assets/Rectangle4.png"),
+            require("../assets/project1_1.png"),
+            require("../assets/project1_1.png"),
+            require("../assets/project1_1.png"),
+            require("../assets/project1_1.png"),
           ],
         },
         {
@@ -120,7 +120,7 @@ export default {
   margin-left: auto;
   width: 50%;
   height: 300px;
-
+  margin-bottom: 400px;
   .swiper-slide {
     h2 {
       font-size: 3rem;
@@ -184,10 +184,13 @@ export default {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  top: 30%;
+  top: 70%;
   color: white;
 }
+.swiper-button-prev {
+  left: 80%;
+}
 .swiper-button-next {
-  right: 31%;
+  right: 10%;
 }
 </style>

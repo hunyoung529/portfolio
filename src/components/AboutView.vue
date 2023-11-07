@@ -1,13 +1,19 @@
 <template lang="">
   <section class="AboutMe">
     <ul class="AboutWrap">
-      <li class="name">정훈영</li>
-      <li class="bod">1992.05.29</li>
-      <li class="address">서울시 송파구</li>
-      <li class="email">gnsdud92@naver.com</li>
-      <li class="studied">University of Sunderland</li>
-      <li class="blog">블로그</li>
-      <li class="resume">이력서</li>
+      <li class="name"><p>정훈영</p></li>
+      <li class="bod"><p>1992.05.29</p></li>
+      <li class="address"><p>서울시 송파구</p></li>
+      <li class="email"><p>gnsdud92@naver.com</p></li>
+      <li class="studied"><p>University of Sunderland</p></li>
+      <li class="blog"><p>블로그</p></li>
+      <li class="resume">
+        <p>
+          <a href="./pdf/resume.pdf" download="resume.pdf" target="_blank"
+            >이력서</a
+          >
+        </p>
+      </li>
     </ul>
   </section>
 </template>
@@ -22,11 +28,18 @@ export default {};
   bottom: 10%;
   right: 0;
   text-align: right;
-
   li {
     line-height: 40px;
     font-size: 1.25rem;
     position: relative;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    p {
+      margin: 0 auto;
+      display: inline-block;
+    }
     &::after {
       content: "";
       background-position: center;
@@ -66,6 +79,15 @@ export default {};
     &:nth-of-type(6) {
       &::after {
         background-image: url(../assets/icon_laptop.png);
+      }
+    }
+    &:nth-of-type(7) {
+      &::after {
+        background-image: url(../assets/icon_download.png);
+      }
+      p:hover {
+        border-bottom: 1px solid white;
+        cursor: pointer;
       }
     }
   }

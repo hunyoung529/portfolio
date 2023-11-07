@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <HeaderView @scrollToClass="scrollToClass" />
-    <AboutView ref="About" />
-    <SkillView ref="Skill" />
-    <ProjectView ref="Project" />
-    <ContactView ref="Contact" />
+    <HeaderView />
+    <AboutView />
+    <SkillView />
+    <ProjectView />
+    <ContactView />
   </div>
 </template>
 
@@ -32,19 +32,7 @@ export default {
       AOS.init();
     });
   },
-  methods: {
-    scrollToClass(className) {
-      console.log(`scrollToClass called with className: ${className}`);
-      const element = document.querySelector(`.${className}`);
-      console.log(`Element: `, element);
-      if (element) {
-        window.scrollTo({
-          top: element.offsetBottom,
-          behavior: "smooth",
-        });
-      }
-    },
-  },
+  methods: {},
 };
 </script>
 <style lang="scss">

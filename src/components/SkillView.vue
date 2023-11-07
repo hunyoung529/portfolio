@@ -1,17 +1,17 @@
 <template lang="">
   <section class="skill">
     <div class="skillWrap">
-      <h2>끊임없이 발전하는 개발자!</h2>
-      <p>프론트엔드에 관심이 있어 여러 프레임워크를 사용해보고 있습니다.</p>
-      <p>결과물은 PROJECC에서 확인하실수 있습니다......</p>
+      <h2>FROM 비전공자 TO BE 개발자!</h2>
+      <p>개발에 관심이 있어 여러 기술들을 배우고 있습니다.</p>
+      <p>배운 기술들을 사용한 결과물은 PROJECT에서 찾아보실 수 있습니다.</p>
       <div class="skillList">
         <div data-aos="fade-left" class="skillItem">
           <figure class="imgBox">
             <img src="../assets/javascript.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>동적 웹페이지 제작 가능</p>
+            <p>비동기 처리,API로 데이터 처리 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -19,8 +19,8 @@
             <img src="../assets/html.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>웹 표준을 준수하는 웹사이트 제작 가능</p>
+            <p>시멘틱 마크업 구성 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -29,7 +29,7 @@
           </figure>
           <div class="textBox">
             <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>다양한 기종에 맞게 반응형 웹 제작 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -46,8 +46,7 @@
             <img src="../assets/jquery.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>동적 웹사이트 구현 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -55,8 +54,8 @@
             <img src="../assets/sass.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>SASS/SCSS를 사용하여 효율적이고</p>
+            <p>가독성 좋은 스타일시트 제작 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -64,8 +63,8 @@
             <img src="../assets/mysql.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>mysql을 활용해서 서버의</p>
+            <p>데이터베이스 관리 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -82,8 +81,8 @@
             <img src="../assets/nextjs.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>nextjs를 사용하여</p>
+            <p>SSR 웹페이지 구현 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -91,8 +90,7 @@
             <img src="../assets/mariadb.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>mariadb를 활용하여 서버 구축 및 연결 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -100,8 +98,7 @@
             <img src="../assets/mongodb.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>mongodb를 활용하여 서버 구축 및 연결 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -109,8 +106,8 @@
             <img src="../assets/git.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>EXPRESS 서버 연결 가능</p>
+            <p>github를 활용해서</p>
+            <p>프로젝트 배포 및 관리 가능</p>
           </div>
         </div>
       </div>

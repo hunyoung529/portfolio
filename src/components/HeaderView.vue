@@ -9,20 +9,63 @@
         <p>FRONT-END DEVELOPER</p>
       </div>
       <nav class="menu">
-        <p class="About active" @click="handleScroll('AboutWrap')">ABOUT</p>
-        <p class="Skill" @click="handleScroll('skillWrap')">SKILL</p>
-        <p class="Project" @click="handleScroll('projectWrap')">PROJECT</p>
-        <p class="Contact" @click="handleScroll('contactWrap')">CONTACT</p>
+        <p :class="{ active: activeSection === 'about' }" @click="scrollTo(0)">
+          ABOUT
+        </p>
+        <p
+          :class="{ active: activeSection === 'skill' }"
+          @click="scrollTo(1550)"
+        >
+          SKILL
+        </p>
+        <p
+          :class="{ active: activeSection === 'project' }"
+          @click="scrollTo(3000)"
+        >
+          PROJECT
+        </p>
+        <p
+          :class="{ active: activeSection === 'contact' }"
+          @click="scrollTo(4600)"
+        >
+          CONTACT
+        </p>
       </nav>
+      <aside class="toTop" :class="{ active: activeSection != 'about' }">
+        <img src="../assets/icon_arrow.png" @click="scrollTo(0)" />
+      </aside>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: "HeaderView",
+  data() {
+    return {
+      currentScrollPosition: 0,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.updateScroll);
+  },
   methods: {
-    handleScroll(className) {
-      this.$emit("scrollToClass", className);
+    scrollTo(v) {
+      window.scrollTo({ left: 0, top: v, behavior: "smooth" });
+    },
+    updateScroll() {
+      this.currentScrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
+    },
+  },
+  computed: {
+    activeSection() {
+      if (this.currentScrollPosition >= 3800) return "contact";
+      else if (this.currentScrollPosition >= 2800) return "project";
+      else if (this.currentScrollPosition >= 1400) return "skill";
+      else return "about";
     },
   },
 };
@@ -74,6 +117,33 @@ export default {
         font-size: 2.5rem;
         margin: 0;
         opacity: 0.6;
+      }
+    }
+
+    .toTop {
+      position: fixed;
+      left: 45%;
+      bottom: 5%;
+      padding: 15px;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      animation: topButton 2s infinite;
+      cursor: pointer;
+      display: none;
+    }
+    .toTop.active {
+      display: block;
+    }
+    @keyframes topButton {
+      0% {
+        transform: translateY(0%);
+      }
+      50% {
+        transform: translateY(30%);
+      }
+      100% {
+        transform: translateY(0%);
       }
     }
   }

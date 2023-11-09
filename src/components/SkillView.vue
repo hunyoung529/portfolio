@@ -28,8 +28,8 @@
             <img src="../assets/css.png" alt="React" />
           </figure>
           <div class="textBox">
-            <p>CSR 기반의 UIUX화면 구현 가능</p>
-            <p>다양한 기종에 맞게 반응형 웹 제작 가능</p>
+            <p>반응형 레이아웃 제작 가능</p>
+            <p>애니메이션 등을 사용해서 UX 향상 가능</p>
           </div>
         </div>
         <div data-aos="fade-left" class="skillItem">
@@ -60,15 +60,6 @@
         </div>
         <div data-aos="fade-left" class="skillItem">
           <figure class="imgBox">
-            <img src="../assets/mysql.png" alt="React" />
-          </figure>
-          <div class="textBox">
-            <p>mysql을 활용해서 서버의</p>
-            <p>데이터베이스 관리 가능</p>
-          </div>
-        </div>
-        <div data-aos="fade-left" class="skillItem">
-          <figure class="imgBox">
             <img src="../assets/vuejs.png" alt="React" />
           </figure>
           <div class="textBox">
@@ -85,6 +76,16 @@
             <p>SSR 웹페이지 구현 가능</p>
           </div>
         </div>
+        <div data-aos="fade-left" class="skillItem">
+          <figure class="imgBox">
+            <img src="../assets/mysql.png" alt="React" />
+          </figure>
+          <div class="textBox">
+            <p>mysql을 활용해서 서버의</p>
+            <p>데이터베이스 관리 가능</p>
+          </div>
+        </div>
+
         <div data-aos="fade-left" class="skillItem">
           <figure class="imgBox">
             <img src="../assets/mariadb.png" alt="React" />

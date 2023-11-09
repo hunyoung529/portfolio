@@ -62,6 +62,7 @@ export default {
     bottom: 10%;
     text-align: left;
     width: 50%;
+    margin-bottom: 200px;
     p {
       font-size: 18px;
       margin-bottom: 50px;
@@ -77,8 +78,15 @@ export default {
       padding: 10px 0;
       border: 0;
       color: white;
-
+      &:last-child {
+        position: absolute;
+        left: 40%;
+        width: 20%;
+        margin-top: 20px;
+        border: 1px solid white;
+      }
       &:not(:last-child) {
+        padding-left: 5px;
         border-bottom: 1px solid white;
       }
     }

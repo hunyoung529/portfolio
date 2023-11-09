@@ -30,7 +30,7 @@
           </div>
           <div class="textBox">
             <h2>{{ slide.title }}</h2>
-            <p class="skills">프로젝트 기술</p>
+            <p class="skills">{{ slide.skills }}</p>
             <p class="introduction">{{ slide.description }}</p>
             <a :href="slide.link">프로젝트 링크</a>
           </div>
@@ -52,8 +52,10 @@ export default {
       slides: [
         {
           id: 1,
-          title: "프로젝트1",
-          description: "프로젝트1에 대한 설명입니다.",
+          title: "라이온힐 펜션",
+          skills: "HTML,CSS,Javascript,Jquery",
+          description:
+            "기존에 있던 웹페이지를 새로운 컨셉 아래 완전 리뉴얼 해서 만들어 봤습니다.",
           link: "#",
           mainImage: require("../assets/project1_1.png"),
           smallImages: [
@@ -67,6 +69,7 @@ export default {
         {
           id: 2,
           title: "프로젝트2",
+          skills: "React,SCSS",
           description: "프로젝트1에 대한 설명입니다.",
           link: "#",
           mainImage: require("../assets/project1_1.png"),
@@ -80,6 +83,7 @@ export default {
         {
           id: 3,
           title: "프로젝트3",
+          skills: "Nextjs,SCSS",
           description: "프로젝트2에 대한 설명입니다.",
           link: "#",
           mainImage: require("../assets/project3_1.png"),

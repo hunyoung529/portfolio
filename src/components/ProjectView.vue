@@ -32,7 +32,7 @@
             <h2>{{ slide.title }}</h2>
             <p class="skills">{{ slide.skills }}</p>
             <p class="introduction">{{ slide.description }}</p>
-            <a :href="slide.link">프로젝트 링크</a>
+            <a :href="slide.link" target="_blank">프로젝트 링크</a>
           </div>
         </swiper-slide>
       </swiper>
@@ -55,37 +55,38 @@ export default {
           title: "라이온힐 펜션",
           skills: "HTML,CSS,Javascript,Jquery",
           description:
-            "기존에 있던 웹페이지를 새로운 컨셉 아래 완전 리뉴얼 해서 만들어 봤습니다.",
-          link: "#",
+            "기존에 있던 웹페이지를 새로운 컨셉 아래 완전 리뉴얼 해서 만들어 봤습니다.js 바닐라를 사용하여 로그인 api, 예약 페이지, 달력 등을 구현했습니다.",
+          link: "https://git-jy.github.io/LionHill",
           mainImage: require("../assets/project1_1.png"),
           smallImages: [
             require("../assets/project1_1.png"),
             require("../assets/project1_2.png"),
             require("../assets/project1_3.png"),
             require("../assets/project1_4.png"),
-            require("../assets/project1_5.png"),
           ],
         },
         {
           id: 2,
-          title: "프로젝트2",
+          title: "FC.GG",
           skills: "React,SCSS",
-          description: "프로젝트1에 대한 설명입니다.",
-          link: "#",
-          mainImage: require("../assets/project1_1.png"),
+          description:
+            "react를 기반으로 FC 온라인의 api를 활용하여 유저의 전적과 경기기록 등을 불러와 비교할 수 있게 만들었습니다.",
+          link: "https://hunyoung529.github.io/react_project",
+          mainImage: require("../assets/project2_1.png"),
           smallImages: [
-            require("../assets/project1_1.png"),
-            require("../assets/project1_1.png"),
-            require("../assets/project1_1.png"),
-            require("../assets/project1_1.png"),
+            require("../assets/project2_1.png"),
+            require("../assets/project2_2.png"),
+            require("../assets/project2_3.png"),
+            require("../assets/project2_4.png"),
           ],
         },
         {
           id: 3,
-          title: "프로젝트3",
+          title: "별별연인",
           skills: "Nextjs,SCSS",
-          description: "프로젝트2에 대한 설명입니다.",
-          link: "#",
+          description:
+            "AI를 기반으로 사주정보를 얻은 후 오행을 비교하여 어울리는 인연을 만나 볼 수 있는 소개팅 앱을 만들었습니다.",
+          link: "https://b3o2.vercel.app/",
           mainImage: require("../assets/project3_1.png"),
           smallImages: [
             require("../assets/project3_2.png"),

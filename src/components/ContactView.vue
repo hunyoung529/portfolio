@@ -1,10 +1,7 @@
 <template lang="">
   <section class="contact">
     <form class="contactWrap" ref="form" @submit.prevent="sendEmail">
-      <p>
-        CSR 기반의 UIUX화면 구현 가능 EXPRESS 서버 연결 가능CSR 기반의 UIUX화면
-        구현 가능 EXPRESS 서버 연결 가능CSR 기반의 UIUX화면 구현 가능
-      </p>
+      <p>문의와 피드백은 언제나 환영입니다.</p>
       <input type="text" placeholder="제목" class="title" name="subject" />
       <input type="email" placeholder="email" class="email" name="user_email" />
       <input type="text" placeholder="내용" class="content" name="message" />

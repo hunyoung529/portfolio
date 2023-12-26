@@ -124,7 +124,7 @@ export default {
 .skillWrap {
   position: absolute;
   top: 20%;
-  right: 0;
+  right: 5%;
   text-align: left;
 
   h2 {

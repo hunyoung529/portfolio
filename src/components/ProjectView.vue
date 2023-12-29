@@ -86,7 +86,7 @@ export default {
           skills: "Nextjs,SCSS",
           description:
             "AI를 기반으로 사주정보를 얻은 후 오행을 비교하여 어울리는 인연을 만나 볼 수 있는 소개팅 앱을 만들었습니다.",
-          link: "https://b3o2.vercel.app/",
+          link: "https://saju-nextjs.vercel.app/",
           mainImage: require("../assets/project3_1.png"),
           smallImages: [
             require("../assets/project3_2.png"),
